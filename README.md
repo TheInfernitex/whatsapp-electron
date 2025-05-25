@@ -1,12 +1,13 @@
 # WhatsApp Desktop For Linux
 
-A desktop client for WhatsApp Web built with Electron built for personal use.
+Running WhatsApp Web in Chrome often consumes high memory and slows down due to browser overhead; an Electron container offers a focused, efficient alternative.
 
 ## ✨ Features
 
+-
 - **🌙 Permanent Dark Mode** - Elegant dark theme that's always active
 - **💬 Full WhatsApp Web Functionality** - All features you know and love
-- **⚡ Native Desktop Experience** - Runs as a native desktop application
+- **⚡ Native Desktop Experience** - Runs as a native desktop application.
 - **🔗 External Link Handling** - Opens links in your default browser
 - **⌨️ Keyboard Shortcuts** - Standard desktop shortcuts supported
 - **🖥️ Cross-Platform** - Available for Windows, macOS, and Linux, Works well with Tiling Window Managers like Hyprland.
