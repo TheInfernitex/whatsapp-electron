@@ -28,9 +28,6 @@ Thumbs.db
 .env.production.local
 
 # Cache and lock files
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
 .cache/
 .pnp.*
 .next/
