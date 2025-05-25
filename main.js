@@ -26,6 +26,7 @@ function createWindow() {
       webSecurity: true,
       sandbox: false,
       hardwareAcceleration: false,
+      preload: path.join(__dirname, "preload.js"),
     },
     backgroundColor: "#111b21",
     autoHideMenuBar: false,
@@ -221,6 +222,9 @@ function createMenu() {
   const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);
 }
+
+// GPU and graphics fixes for Linux
+app.disableHardwareAcceleration();
 
 // Command line switches for better Linux compatibility
 app.commandLine.appendSwitch("--no-sandbox");
