@@ -1,0 +1,87 @@
+{
+  "name": "whatsapp-electron",
+  "version": "1.0.0",
+  "description": "WhatsApp Web desktop application with dark mode and performance optimizations",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "build": "electron-builder",
+    "build-linux": "electron-builder --linux",
+    "build-all": "electron-builder --linux --win --mac",
+    "dist": "npm run build",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "build": {
+    "appId": "com.whatsapp.desktop",
+    "productName": "WhatsApp",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "assets/**/*"
+    ],
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "deb",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        },
+        {
+          "target": "rpm",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "category": "Network",
+      "icon": "assets/icon.png",
+      "desktop": {
+        "Name": "WhatsApp",
+        "Comment": "WhatsApp Desktop",
+        "Categories": "Network;InstantMessaging;",
+        "Keywords": "whatsapp;chat;messaging;"
+      }
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns",
+      "category": "public.app-category.social-networking"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "keywords": [
+    "whatsapp",
+    "electron",
+    "desktop",
+    "messaging",
+    "chat"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^36.3.1",
+    "electron-builder": "^26.0.12"
+  }
+}
