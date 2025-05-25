@@ -1,4 +1,4 @@
-# WhatsApp Desktop - Dark Mode Edition
+# WhatsApp Desktop For Linux
 
 A desktop client for WhatsApp Web built with Electron built for personal use.
 
